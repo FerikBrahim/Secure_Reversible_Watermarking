@@ -1,0 +1,12 @@
+python==3.10
+numpy
+scipy
+opencv-python
+scikit-image
+matplotlib
+pywavelets
+pillow
+tqdm
+pandas
+seaborn
+pyyaml

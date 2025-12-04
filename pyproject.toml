@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "secure-reversible-watermarking"
+version = "1.0.0"
+description = "Protecting consumer healthcare imaging data from AI-tampering via blind reversible watermarking."
+readme = "README.md"
+requires-python = ">=3.10"
+
+authors = [
+    {name = "Brahim Ferik"},
+    {name = "Wei Min"},
+	{name = "Abdelkader Laouid"},
+	{name = "Mohammad Hammoudeh"},
+	{name = "Farag Azzedin"}
+]
+
+license = {text = "MIT"}
+
+keywords = [
+    "watermarking",
+    "reversible watermarking",
+    "medical imaging",
+    "flexentech",
+    "dwt",
+    "iwt",
+    "cryptography",
+    "biometrics",
+    "deep learning",
+    "authentication"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Scientific/Engineering :: Image Processing"
+]
+
+# ---------------------------------------------------------------------
+# Dependencies used throughout the project
+# ---------------------------------------------------------------------
+dependencies = [
+    "numpy",
+    "scikit-image",
+    "pywavelets",
+    "opencv-python",
+    "pillow",
+    "pyyaml",
+    "tqdm",
+    "matplotlib"
+]
+
+# Optional dependencies for extended experiments
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "isort",
+    "mypy"
+]
+
+notebooks = [
+    "jupyter",
+    "notebook"
+]
+
+# ---------------------------------------------------------------------
+# Where the source code lives
+# ---------------------------------------------------------------------
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# ---------------------------------------------------------------------
+# Linters/formatters configuration (optional but recommended)
+# ---------------------------------------------------------------------
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 88
+ignore = ["E203", "W503"]
+
